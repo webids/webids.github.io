@@ -1,0 +1,22 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cert: <http://www.w3.org/ns/auth/cert#> .
+@prefix rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<> a foaf:PersonalProfileDocument ;
+   foaf:maker <#this> ;
+   foaf:primaryTopic <#this> .
+
+# <> resolves to https://raw.githubusercontent.com/dbpedia/webid/master/example/webid_ex.ttl
+
+<#this> a foaf:Person ;
+   foaf:name "Renato Fabbri";
+cert:key [
+      a cert:RSAPublicKey;
+      rdfs:label "generated on 19/Jul/2018";
+      cert:modulus "CB401340084BCE977FD3E734CD5832CE9276D8860E1DBA7FDDA5D72C5DF23545884A75E9E659E65A75B3BF6C9A3D54ED2589FD4564C8A23FCEAAD701CE83FF6ABDB9F21FBCEC5CA8B2E4A
+2FF2BC5C1FD31B6F22334A71769F80D4665C8E1C0FD4BA848AA111605F3353DD5C6D23FFE6FA04E158FD98064B628AE52067D3F7821697A887C8134F7ADB9A9A4962060BFF996D67B33E43A3AFA8339877BF37A11
+49585ED151549B5D5E3F71B8E0012E16A4CD800A02C5D17ECB8295FA0581771E2C5E97794EBEBDE9AB836CC02FB385E059A2E22550AD29051ABBC89387CFAAC70FA82E602C418997C539C6B737A6D60612E4B1A60
+9B27590F6914383D850ACF18F"^^xsd:hexBinary;
+      cert:exponent "65537"^^xsd:integer;
+     ] .
